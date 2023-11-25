@@ -23,3 +23,19 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+const LoginPage = require("../pages/login");
+
+Cypress.Commands.add("accessHome", () => {
+  cy.visit("https://magento.softwaretestingboard.com");
+});
+
+Cypress.Commands.add(
+  "login",
+  (email = "admin@example.com", password = "password") => {
+    LoginPage.visit();
+    LoginPage.fillEmail(email);
+    LoginPage.fillPassword(password);
+    LoginPage.submit();
+  }
+);
