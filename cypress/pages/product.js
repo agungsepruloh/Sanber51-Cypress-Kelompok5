@@ -1,5 +1,5 @@
 class ProductPage {
-  visit() {
+  visitWhatsNew() {
     cy.visit("https://magento.softwaretestingboard.com/what-is-new.html");
   }
 
