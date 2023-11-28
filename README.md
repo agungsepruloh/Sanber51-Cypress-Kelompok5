@@ -4,3 +4,4 @@
 | --------------- | ------------------------ |
 | Agung Sepruloh  | Login, Choose Product(s) |
 | Nadiya Rahayu   | Create Account           |
+| Fikri Refo J.   | View and Update Shopping Cart           |
