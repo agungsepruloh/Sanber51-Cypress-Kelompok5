@@ -13,4 +13,4 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
-          working-directory: cypress/e2e/3-web-magento
+          spec: cypress/e2e/3-web-magento/*.cy.js
