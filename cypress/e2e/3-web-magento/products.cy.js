@@ -206,7 +206,7 @@ describe("Adding multiple products to the cart", () => {
     ProductPage.visitWhatsNew();
   });
 
-  it.only("Should add multiple products to the cart", () => {
+  it("Should add multiple products to the cart", () => {
     // Select the first product item
     ProductPage.productItems.get(".product-item-link").eq(0).click();
 
