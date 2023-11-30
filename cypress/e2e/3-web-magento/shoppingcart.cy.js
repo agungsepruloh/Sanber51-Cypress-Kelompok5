@@ -54,13 +54,11 @@ describe('View and Update Shopping Cart', () => {
 
     // Assert that the success message is displayed
     cy.get(".message-success").should("be.visible");
-    
-    // Visit cart
-    CartPage.visitCart();
 
   });
 
-  it("Should add the product to the cart after selecting a size, color and quantity", () => {
-    
+  it("Should view add product in cart", () => {
+    // Visit cart
+    CartPage.visitCart();
     });
 });
