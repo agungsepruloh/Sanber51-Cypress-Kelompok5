@@ -11,6 +11,14 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
+Cypress.Commands.add('create_acoount', () => {
+  cy.get('#firstname').type("Nadiya")
+  cy.get('#lastname').type("Rahayu")
+  cy.get('#email_address').type("nadiyarahayu035@gmail.com")
+  cy.get('#password').type("Magento12!")
+  cy.get('#password-confirmation').type("Magento12!")
+  cy.get('#form-validate > .actions-toolbar > div.primary > .action > span').click() 
+});
 //
 //
 // -- This is a child command --
