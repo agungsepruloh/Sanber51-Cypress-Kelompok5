@@ -20,7 +20,7 @@ describe('verivy create account functionality', () => {
     cy.get('.panel > .header > :nth-child(3) > a').click()
     cy.get(PageCreateAccount.ofirstname).type("Nadiya")
     cy.get(PageCreateAccount.olastname).type("Rahayu")
-    cy.get(PageCreateAccount.oemail_address).type("nadiyar123@gmail.com")
+    cy.get(PageCreateAccount.oemail_address).type("nadiya123@gmail.com")
     cy.get(PageCreateAccount.opassword).type("Magento12!")
     cy.get(PageCreateAccount.opasswordconfirmation).type("Magento12!")
     cy.get(PageCreateAccount.obuttonregister).click()
