@@ -1,0 +1,9 @@
+class registerpage{
+    ofirstname='#firstname'
+    olastname= '#lastname'
+    oemail_address='#email_address'
+    opassword='#password'
+    opasswordconfirmation= '#password-confirmation'
+    obuttonregister= '#form-validate > .actions-toolbar > div.primary > .action > span'
+}
+export default new registerpage()

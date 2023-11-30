@@ -1,0 +1,19 @@
+{
+    "validRegister": {
+       "dfirst_name": "Manggala",
+       "dlast_name": "Saputra",
+       "demail": "nadiyar@gmail.com",
+       "dpassword": "Magenta12!",
+       "dconfirmationpassword": "Magenta12!"
+    },
+    "invalidRegis": {
+      "email": "invaliduser@example.com",
+      "password": "invalidpassword",
+      "dfirst_name": "Gala",
+       "dlast_name": "Puta",
+       "demail": "invaliduser.com",
+       "dpassword": "invalidpassword",
+       "dconfirmationpassword": "invalidpassword"
+    }
+  }
+  
