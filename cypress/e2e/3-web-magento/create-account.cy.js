@@ -6,6 +6,7 @@ describe('verivy create account functionality', () => {
     //cy.visit('https://magento.softwaretestingboard.com/')
     cy.accessHome()
     cy.get('.panel > .header > :nth-child(3) > a').click()
+    //cy.get('a[href="https://magento.softwaretestingboard.com/customer/account/create/"').click()
     cy.get('#firstname').type("Nadiya")
     cy.get('#lastname').type("Rahayu")
     cy.get('#email_address').type("nadiyaraha1@gmail.com")
@@ -17,7 +18,8 @@ describe('verivy create account functionality', () => {
   it('valid create account', () => {
     //cy.visit('https://magento.softwaretestingboard.com/')
     cy.accessHome()
-    cy.get('.panel > .header > :nth-child(3) > a').click()
+    cy.contains('Create an Account').click({force:true});
+    //cy.get('.panel > .header > :nth-child(3) > a').click()
     cy.get(PageCreateAccount.ofirstname).type("Nadiya")
     cy.get(PageCreateAccount.olastname).type("Rahayu")
     cy.get(PageCreateAccount.oemail_address).type("nadiya123@gmail.com")
@@ -29,8 +31,9 @@ describe('verivy create account functionality', () => {
   it('invalid email create account', () => {
     //cy.visit('https://magento.softwaretestingboard.com/')
     cy.accessHome()
-    cy.get('.panel > .header > :nth-child(3) > a').click()
-    cy.get(PageCreateAccount.ofirstname).type("Nadiya")
+    //cy.get('.panel > .header > :nth-child(3) > a').click()
+    cy.contains('Create an Account').click({force:true});
+    cy.get('#firstname').type("Nadiya")
     cy.get(PageCreateAccount.olastname).type("Rahayu")
     cy.get(PageCreateAccount.oemail_address).type(Dataregis.invalidRegis.demail)
     cy.get(PageCreateAccount.opassword).type("Magento12!")
@@ -41,7 +44,8 @@ describe('verivy create account functionality', () => {
   it('invalid password confirmation create account', () => {
    //cy.visit('https://magento.softwaretestingboard.com/')
     cy.accessHome()
-    cy.get('.panel > .header > :nth-child(3) > a').click()
+    cy.contains('Create an Account').click({force:true});
+    //cy.get('.panel > .header > :nth-child(3) > a').click()
     cy.get(PageCreateAccount.ofirstname).type("Nadiyar")
     cy.get(PageCreateAccount.olastname).type("Rahayu")
     cy.get(PageCreateAccount.oemail_address).type(Dataregis.validRegister.demail)
@@ -54,7 +58,8 @@ describe('verivy create account functionality', () => {
 it('invalid password create account', () => {
   //cy.visit('https://magento.softwaretestingboard.com/')
    cy.accessHome()
-   cy.get('.panel > .header > :nth-child(3) > a').click()
+   cy.contains('Create an Account').click({force:true});
+   //cy.get('.panel > .header > :nth-child(3) > a').click()
    cy.get(PageCreateAccount.ofirstname).type("Nadiya")
    cy.get(PageCreateAccount.olastname).type("Rahayu")
    cy.get(PageCreateAccount.oemail_address).type(Dataregis.validRegister.demail)
@@ -67,7 +72,8 @@ it('invalid password create account', () => {
 it('empty first name', () => {
   //cy.visit('https://magento.softwaretestingboard.com/')
    cy.accessHome()
-   cy.get('.panel > .header > :nth-child(3) > a').click()
+   cy.contains('Create an Account').click({force:true});
+  // cy.get('.panel > .header > :nth-child(3) > a').click()
    cy.get(PageCreateAccount.ofirstname).type("Nad").clear()
    cy.get(PageCreateAccount.olastname).type("Rahayu")
    cy.get(PageCreateAccount.oemail_address).type(Dataregis.validRegister.demail)
@@ -80,7 +86,8 @@ it('empty first name', () => {
 it('empty last name', () => {
   //cy.visit('https://magento.softwaretestingboard.com/')
    cy.accessHome()
-   cy.get('.panel > .header > :nth-child(3) > a').click()
+   cy.contains('Create an Account').click({force:true});
+  // cy.get('.panel > .header > :nth-child(3) > a').click()
    cy.get(PageCreateAccount.ofirstname).type(Dataregis.validRegister.dfirst_name)
    cy.get(PageCreateAccount.olastname).type("Rahayu").clear()
    cy.get(PageCreateAccount.oemail_address).type(Dataregis.validRegister.demail)
@@ -93,7 +100,8 @@ it('empty last name', () => {
 it('empty email', () => {
   //cy.visit('https://magento.softwaretestingboard.com/')
    cy.accessHome()
-   cy.get('.panel > .header > :nth-child(3) > a').click()
+   cy.contains('Create an Account').click({force:true});
+  // cy.get('.panel > .header > :nth-child(3) > a').click()
    cy.get(PageCreateAccount.ofirstname).type(Dataregis.validRegister.dfirst_name)
    cy.get(PageCreateAccount.olastname).type(Dataregis.validRegister.dlast_name)
    cy.get(PageCreateAccount.oemail_address).type('nadi@gmail.com').clear()
